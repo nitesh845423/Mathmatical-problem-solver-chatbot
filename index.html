@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🧠 Math Buddy Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">
+      🧠 Math Buddy
+    </div>
+    <ul class="sidebar-menu">
+      <li>Home</li>
+      <li>About</li>
+      <li>Settings</li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Greeting Section -->
+    <header class="header">
+      <h1 id="greeting"></h1>
+      <p>Your Friendly Math Assistant ✏️</p>
+    </header>
+
+    <!-- Chatbot Section -->
+    <div class="chat-container">
+      <div class="chatbox" id="chatbox">
+        <!-- Messages will appear here -->
+      </div>
+    </div>
+
+    <form id="message-form" class="input-area">
+      <input
+        type="text"
+        id="message-input"
+        name="message"
+        placeholder="Ask me a math question..."
+        required
+      >
+      <button type="submit">➤</button>
+    </form>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
